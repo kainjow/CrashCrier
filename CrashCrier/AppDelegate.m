@@ -92,11 +92,6 @@ static void eventStreamCallback(ConstFSEventStreamRef streamRef, void *clientCal
     (void)[[NSWorkspace sharedWorkspace] openURL:url];
 }
 
-- (void)userNotificationCenter:(NSUserNotificationCenter *)center didDeliverNotification:(NSUserNotification *)notification
-{
-    [center removeDeliveredNotification:notification];
-}
-
 @end
 
 int main(int argc, const char * argv[])
