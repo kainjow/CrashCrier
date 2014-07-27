@@ -102,10 +102,10 @@ static void eventStreamCallback(ConstFSEventStreamRef streamRef, void *clientCal
 int main(int argc, const char * argv[])
 {
     @autoreleasepool {
-        (void)[NSApplication sharedApplication];
+        NSApplication *nsapp = [NSApplication sharedApplication];
         AppDelegate *app = [[AppDelegate alloc] init];
-        [NSApp setDelegate:app];
-        [NSApp run];
+        nsapp.delegate = app;
+        [nsapp run];
         return EXIT_SUCCESS;
     }
 }
