@@ -220,6 +220,7 @@
 		A5CEEBD017825BD800E4CECF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: Kevin Wojniak";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "CrashCrier/CrashCrier-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -230,6 +231,7 @@
 		A5CEEBD117825BD800E4CECF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: Kevin Wojniak";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "CrashCrier/CrashCrier-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
