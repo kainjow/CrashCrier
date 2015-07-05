@@ -30,6 +30,8 @@
 	<string>Copyright © 2013-2014 Kevin Wojniak. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
+	<key>NSUserNotificationAlertStyle</key>
+	<string>alert</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

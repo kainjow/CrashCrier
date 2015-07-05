@@ -76,6 +76,8 @@ static void eventStreamCallback(ConstFSEventStreamRef streamRef, void *clientCal
                 userNotif.subtitle = exceptionType;
                 userNotif.informativeText = path;
                 userNotif.userInfo = @{@"path" : [url path]};
+                userNotif.hasActionButton = YES;
+                userNotif.actionButtonTitle = NSLocalizedString(@"Copy", "");
                 NSUserNotificationCenter *userNotifCenter = [NSUserNotificationCenter defaultUserNotificationCenter];
                 userNotifCenter.delegate = self;
                 [userNotifCenter deliverNotification:userNotif];
@@ -89,7 +91,23 @@ static void eventStreamCallback(ConstFSEventStreamRef streamRef, void *clientCal
 - (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification
 {
     NSURL *url = [NSURL fileURLWithPath:notification.userInfo[@"path"]];
-    (void)[[NSWorkspace sharedWorkspace] openURL:url];
+    switch (notification.activationType) {
+        case NSUserNotificationActivationTypeContentsClicked:
+            (void)[[NSWorkspace sharedWorkspace] openURL:url];
+            break;
+        case NSUserNotificationActivationTypeActionButtonClicked: {
+            NSString *str = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+            if (str) {
+                NSPasteboard *pboard = [NSPasteboard generalPasteboard];
+                [pboard clearContents];
+                [pboard declareTypes:@[NSPasteboardTypeString] owner:self];
+                (void)[pboard setString:str forType:NSPasteboardTypeString];
+            }
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 @end
