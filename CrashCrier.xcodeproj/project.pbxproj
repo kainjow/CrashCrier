@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -103,11 +103,11 @@
 		A5CEEB9617825BD800E4CECF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Kevin Wojniak";
 			};
 			buildConfigurationList = A5CEEB9917825BD800E4CECF /* Build configuration list for PBXProject "CrashCrier" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -164,6 +164,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -223,6 +224,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application: Kevin Wojniak";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "CrashCrier/CrashCrier-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kainjow.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -234,6 +236,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application: Kevin Wojniak";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "CrashCrier/CrashCrier-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kainjow.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

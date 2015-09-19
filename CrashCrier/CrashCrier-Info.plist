@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>icon</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.kainjow.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -30,9 +30,9 @@
 	<string>Copyright © 2013-2015 Kevin Wojniak. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
-	<key>NSUserNotificationAlertStyle</key>
-	<string>alert</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSUserNotificationAlertStyle</key>
+	<string>alert</string>
 </dict>
 </plist>
